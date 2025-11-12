@@ -1,15 +1,22 @@
+#include<string>
+#include "Animal.h"
+using namespace std;
+
 #ifndef ENCLOSURE_H
 #define ENCLOSURE_H
 
-#include "Animal.h"
+class Enclosure{
+private:
+Animal* animals;
+int capacity;
+int currentCount;
 
-//define enclosure class here 
+public:
+Enclosure();
+Enclosure(int);
+~Enclosure();
 
-
-
-
-
-
-
-
+void addAnimal(Animal*);
+void displayAnimal();
+};
 #endif
