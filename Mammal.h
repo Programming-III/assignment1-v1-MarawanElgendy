@@ -1,13 +1,20 @@
+#include<string>
+#include "Animal.h"
+using namespace std;
+
 #ifndef MAMMAL_H
 #define MAMMAL_H
 
-#include "Animal.h"
+class Mammal: public Animal{
+private:
+string furColor;
 
-//define mammal class here
+public:
+Mammal();
+Mammal(string, int, bool, string);
+~Mammal();
 
-
-
-
-
-
+void setFurColor(string);
+string getFurColot();
+};
 #endif
