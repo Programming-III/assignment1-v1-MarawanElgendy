@@ -125,13 +125,13 @@ cout<<"Visitor Name: "<<visitorName<<"\nTicket: "<<ticketBought<<endl;
 int main(){
  Enclosure e(10);
 
-Animal lion("Lion",5,true);
-Animal parrot("parrot",2, false);
-Reptile snake("snake",3,true,true);
+Animal* lion = new Animal("Lion",5,true);
+Animal* parrot = new Animal("parrot",2, false);
+Reptile* snake = new Reptile("snake",3,true,true);
 
-e.addAnimal(&lion);
-e.addAnimal(&parrot);
-e.addAnimal(&snake);
+e.addAnimal(lion);
+e.addAnimal(parrot);
+e.addAnimal(snake);
 cout<<"Enclosure 1 Animals: "<<endl;
 e.displayAnimal();
 
@@ -141,4 +141,5 @@ v.displayInfo();
 
     return  0;
 }
+
 
